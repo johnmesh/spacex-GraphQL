@@ -9,7 +9,6 @@ import { GeneralDetails } from './shared/GeneralDetails'
 
 export default function LastLaunchView() {
   const { loading, launchNext } = useDataContext()
-  console.log('launchNext==>', launchNext)
   return (
     <div className="p-2 w-3/5 m-auto">
       <div className="flex mt-10 gap-8 h-fit h-96">

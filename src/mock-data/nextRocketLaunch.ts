@@ -1,4 +1,4 @@
-export const launchNextRes = {
+export const nextLaunchRes = {
   id: '110',
   upcoming: true,
   launch_success: null,
