@@ -6,7 +6,7 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/missions',
+        destination: '/launch/home',
         permanent: true,
       },
     ]
