@@ -1,5 +1,11 @@
 import React from 'react'
-import { useDataContext } from 'hooks/useDataProvider'
+import {
+  useDataContext,
+  useLastRocketLaunchQuery,
+  LastLaunchDataDocument,
+} from 'hooks/useDataProvider'
+import { Launch } from '../types/dataTypes'
+import { useQuery } from '@apollo/client'
 import { GeneralDetails } from './shared/GeneralDetails'
 import { RocketDetails } from './shared/RocketDetails'
 import { LaunchSiteDetails } from './shared/LaunchSiteDetails'
@@ -8,8 +14,8 @@ import { ShipsListHeader } from './shared/ShipListHeader'
 import { ShipListBody } from './shared/ShipListBody'
 
 export default function LastLaunchView() {
-  const { loading, launchLatest } = useDataContext()
-  console.log('launchLatest==>', launchLatest)
+  const { launchLatest } = useDataContext()
+
   return (
     <div className="p-2 w-3/5 m-auto">
       <div className="flex mt-10 gap-8 h-fit h-96">

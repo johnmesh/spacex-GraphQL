@@ -17,18 +17,22 @@ export const LaunchSiteDetails = ({
     <div className="w-2/4 h-60">
       <CardHeader title="LaunchSite Details" />
       <CardBody>
-        <ListItem label="SiteID" text={site_id ? site_id : '--'} />
-        <ListItem label="SiteName" text={site_name ? site_name : '--'} />
+        <ListItem label="SiteID" id="SiteID" text={site_id ? site_id : '--'} />
+        <ListItem
+          label="SiteName"
+          id="SiteName"
+          text={site_name ? site_name : '--'}
+        />
 
         <div className='"flex flex-col text-sm mt-2 '>
           <span className="text-gray-400">SiteNameLong:</span>
           <textarea
-            id="details"
+            data-testid="siteNameLong"
             rows={6}
             className="w-full  border-[1px] rounded mt-1"
             disabled
             style={{ resize: 'none' }}
-            value={site_name_long}
+            value={site_name_long ?? ''}
           />
         </div>
       </CardBody>

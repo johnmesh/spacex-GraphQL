@@ -28,32 +28,41 @@ export const GeneralDetails = ({
         <ListItem
           label="MissionName"
           text={mission_name ? mission_name : '--'}
+          id="missionName"
         />
         <ListItem
           label="LaunchDate"
           text={launch_date_local ? launch_date_local : '--'}
+          id="launchDate"
         />
-        <ListItem label="LaunchYear" text={launch_year ? launch_year : '--'} />
+        <ListItem
+          label="LaunchYear"
+          text={launch_year ? launch_year : '--'}
+          id="launchYear"
+        />
         <ListItem
           label="StaticFireDate"
           text={static_fire_date_utc ? static_fire_date_utc : '--'}
+          id="staticFireDate"
         />
         <ListItem
           label="TentativeMaxPrecision"
           text={tentative_max_precision ? tentative_max_precision : '--'}
+          id="tentativeMaxPrecision"
         />
         <ListItem
           label="LaunchSuccess"
           text={launch_success ? `${launch_success}` : '--'}
+          id="launchSuccess"
         />
         <div className='"flex flex-col text-sm mt-2 '>
           <span className="text-gray-400">Details:</span>
           <textarea
-            id="details"
+            data-testid="details"
             rows={6}
             className="w-full  border-[1px] rounded mt-1"
             disabled
-            value={details}
+            value={details ?? ''}
             style={{ resize: 'none' }}
           />
         </div>

@@ -10,7 +10,7 @@ export type NextLaunchInfoQuery = {
   launchNext: Launch
 }
 
-const NextLaunchDateDocument = gql`
+export const NextLaunchDateDocument = gql`
   query NextRocketLaunch {
     launchNext {
       id
@@ -66,7 +66,7 @@ const NextLaunchDateDocument = gql`
   }
 `
 
-const LastLaunchDataDocument = gql`
+export const LastLaunchDataDocument = gql`
   query LastRocketLaunch {
     launchLatest {
       id
@@ -147,7 +147,7 @@ export const DataProvider: React.FC = ({ children }) => {
   )
 }
 
-const useLastRocketLaunchQuery = () =>
+export const useLastRocketLaunchQuery = () =>
   useQuery<LastLaunchInfoQuery>(LastLaunchDataDocument)
 
 const useNextRocketlaunchQuery = () =>
